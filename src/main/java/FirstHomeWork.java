@@ -14,7 +14,7 @@ public class FirstHomeWork {
             List<FactsAboutCats> factsAboutCatsList = Parser.JsonToObj(response.getEntity().getContent());
              factsAboutCatsList
                     .stream()
-                    .filter((FactsAboutCats facts) -> facts.getUpvotes()==null)
+                    .filter((FactsAboutCats facts) -> facts.getUpvotes()!=null)
                     .forEach(System.out::println);
         } catch (IOException ioException) {
             ioException.printStackTrace();
